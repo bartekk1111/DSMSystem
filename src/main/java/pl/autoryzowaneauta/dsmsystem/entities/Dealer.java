@@ -31,7 +31,6 @@ public class Dealer {
     private String zip;
 
     @OneToMany(mappedBy = "dealer", cascade = CascadeType.ALL)
-    @JoinColumn(name = "user_id")
     private List<User> users;
 
 }
