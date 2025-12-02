@@ -14,20 +14,19 @@ public class Car {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id")
     private Long id;
 
-    @Column(name = "brand")
     private String brand;
 
-    @Column(name = "model")
     private String model;
 
-    @Column(name = "vin")
     private String vin;
 
-    @Column(name = "year")
     private int year;
+
+    @ManyToOne
+    @JoinColumn(name = "dealer_id")
+    private Dealer dealer;
 
 
 }

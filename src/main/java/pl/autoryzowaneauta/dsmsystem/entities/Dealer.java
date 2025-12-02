@@ -15,22 +15,20 @@ import java.util.List;
 public class Dealer {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id")
     private Long id;
 
-    @Column(name = "name")
     private String name;
 
-    @Column(name = "street")
     private String street;
 
-    @Column(name = "city")
     private String city;
 
-    @Column(name = "zip")
     private String zip;
 
     @OneToMany(mappedBy = "dealer", cascade = CascadeType.ALL)
     private List<User> users;
+
+    @OneToMany(mappedBy = "dealer", cascade = CascadeType.ALL)
+    private List<Car> cars;
 
 }
