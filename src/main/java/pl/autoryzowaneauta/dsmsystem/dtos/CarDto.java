@@ -4,6 +4,8 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import pl.autoryzowaneauta.dsmsystem.entities.Dealer;
 
+import java.math.BigDecimal;
+
 @AllArgsConstructor
 @Getter
 public class CarDto {
@@ -12,5 +14,7 @@ public class CarDto {
     private String model;
     private String vin;
     private int year;
+    private BigDecimal price;
+    private int course;
     private Dealer dealer;
 }

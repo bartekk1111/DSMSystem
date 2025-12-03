@@ -3,6 +3,8 @@ package pl.autoryzowaneauta.dsmsystem.entities;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.math.BigDecimal;
+
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
@@ -23,6 +25,10 @@ public class Car {
     private String vin;
 
     private int year;
+
+    private BigDecimal price;
+
+    private int course;
 
     @ManyToOne
     @JoinColumn(name = "dealer_id")
