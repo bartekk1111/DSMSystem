@@ -6,9 +6,11 @@ import pl.autoryzowaneauta.dsmsystem.entities.Dealer;
 
 @AllArgsConstructor
 @Getter
-public class UserDto {
+public class CarDto {
     private Long id;
-    private String name;
-    private String email;
+    private String brand;
+    private String model;
+    private String vin;
+    private int year;
     private Dealer dealer;
 }
