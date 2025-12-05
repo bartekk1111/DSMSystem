@@ -1,8 +1,7 @@
-package pl.autoryzowaneauta.dsmsystem.dtos;
+package pl.autoryzowaneauta.dsmsystem.users;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
-import pl.autoryzowaneauta.dsmsystem.entities.Dealer;
 
 @AllArgsConstructor
 @Getter
@@ -10,5 +9,5 @@ public class UserDto {
     private Long id;
     private String name;
     private String email;
-    private Dealer dealer;
+    private Long dealerId;
 }

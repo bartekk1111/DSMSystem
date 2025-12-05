@@ -1,8 +1,7 @@
-package pl.autoryzowaneauta.dsmsystem.dtos;
+package pl.autoryzowaneauta.dsmsystem.cars;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
-import pl.autoryzowaneauta.dsmsystem.entities.Dealer;
 
 import java.math.BigDecimal;
 
@@ -16,5 +15,9 @@ public class CarDto {
     private int year;
     private BigDecimal price;
     private int course;
-    private Dealer dealer;
+    private String fuelType;
+    private String engineCapacity;
+    private String transmission;
+    private String description;
+    private Long dealerId;
 }

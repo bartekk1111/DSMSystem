@@ -1,7 +1,8 @@
-package pl.autoryzowaneauta.dsmsystem.entities;
+package pl.autoryzowaneauta.dsmsystem.users;
 
 import jakarta.persistence.*;
 import lombok.*;
+import pl.autoryzowaneauta.dsmsystem.dealers.Dealer;
 
 @AllArgsConstructor
 @NoArgsConstructor
@@ -16,9 +17,7 @@ public class User {
     private Long id;
 
     private String name;
-
     private String email;
-
     private String password;
 
     @ManyToOne

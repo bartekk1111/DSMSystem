@@ -1,7 +1,9 @@
-package pl.autoryzowaneauta.dsmsystem.entities;
+package pl.autoryzowaneauta.dsmsystem.dealers;
 
 import jakarta.persistence.*;
 import lombok.*;
+import pl.autoryzowaneauta.dsmsystem.cars.Car;
+import pl.autoryzowaneauta.dsmsystem.users.User;
 
 import java.util.List;
 
@@ -18,11 +20,8 @@ public class Dealer {
     private Long id;
 
     private String name;
-
     private String street;
-
     private String city;
-
     private String zip;
 
     @OneToMany(mappedBy = "dealer", cascade = CascadeType.ALL)

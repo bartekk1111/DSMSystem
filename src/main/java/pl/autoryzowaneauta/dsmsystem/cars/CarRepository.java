@@ -1,7 +1,6 @@
-package pl.autoryzowaneauta.dsmsystem.repositories;
+package pl.autoryzowaneauta.dsmsystem.cars;
 
 import org.springframework.data.jpa.repository.JpaRepository;
-import pl.autoryzowaneauta.dsmsystem.entities.Car;
 
 public interface CarRepository extends JpaRepository<Car, Long> {
 }

@@ -1,12 +1,11 @@
-package pl.autoryzowaneauta.dsmsystem.controllers;
+package pl.autoryzowaneauta.dsmsystem.cars;
 
 import lombok.AllArgsConstructor;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
-import pl.autoryzowaneauta.dsmsystem.dtos.CarDto;
-import pl.autoryzowaneauta.dsmsystem.mappers.CarMapper;
-import pl.autoryzowaneauta.dsmsystem.repositories.CarRepository;
 
 @Controller
 @AllArgsConstructor
@@ -22,6 +21,15 @@ public class CarController {
                 .stream()
                 .map(carMapper::toDto)
                 .toList();
+    }
+
+    @GetMapping("/{id}")
+    public ResponseEntity<CarDto> getCar(@PathVariable Long id) {
+        var car = carRepository.findById(id).orElse(null);
+        if (car == null) {
+            return ResponseEntity.notFound().build();
+        }
+        return ResponseEntity.ok(carMapper.toDto(car));
     }
 
 }

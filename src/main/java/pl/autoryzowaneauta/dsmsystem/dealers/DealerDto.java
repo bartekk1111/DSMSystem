@@ -1,9 +1,9 @@
-package pl.autoryzowaneauta.dsmsystem.dtos;
+package pl.autoryzowaneauta.dsmsystem.dealers;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
-import pl.autoryzowaneauta.dsmsystem.entities.Car;
-import pl.autoryzowaneauta.dsmsystem.entities.User;
+import pl.autoryzowaneauta.dsmsystem.cars.CarDto;
+import pl.autoryzowaneauta.dsmsystem.users.UserDto;
 
 import java.util.List;
 
@@ -15,6 +15,6 @@ public class DealerDto {
     private String street;
     private String city;
     private String zip;
-    private List<User> users;
-    private List<Car> cars;
+    private List<UserDto> users;
+    private List<CarDto> cars;
 }
